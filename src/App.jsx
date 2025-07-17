@@ -39,14 +39,14 @@ function ApiKeyModal({ open, onClose }) {
 export default function App() {
   const [apiKeyModalOpen, setApiKeyModalOpen] = useState(false);
   // // 生成20个模拟图片数据用于分页测试
-  const mockImages = Array.from({ length: 20 }).map((_, i) => ({
-    url: 'https://ugc-media.4gamers.com.tw/puku-prod-zh/anonymous-story/f32954ce-1699-4ca2-b804-299db2146f3e.jpg',
-    prompt: `模拟提示词 ${i + 1}`,
-    model: 'flux-kontext-max',
-    time: Date.now() + i,
-  }));
-  const [images, setImages] = useState(mockImages); // 所有生成图片
-  // const [images, setImages] = useState([]); // 所有生成图片
+  // const mockImages = Array.from({ length: 20 }).map((_, i) => ({
+  //   url: 'https://ugc-media.4gamers.com.tw/puku-prod-zh/anonymous-story/f32954ce-1699-4ca2-b804-299db2146f3e.jpg',
+  //   prompt: `模拟提示词 ${i + 1}`,
+  //   model: 'flux-kontext-max',
+  //   time: Date.now() + i,
+  // }));
+  // const [images, setImages] = useState(mockImages); // 所有生成图片
+  const [images, setImages] = useState([]); // 所有生成图片
 
   // 新增图片后追加到images
   const handleAddImage = (imgObj) => {
